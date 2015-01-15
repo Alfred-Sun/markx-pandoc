@@ -1,3 +1,9 @@
+---
+layout: null
+title: Pandoc Markdown写作规范
+keywords: Pandoc Markdown Syntax
+description: 本文是远程集体写书的格式规范说明文档。考虑到不少作者，已熟悉Markdown格式，因此，特别撰写一份基于Pandoc Markdown的写作格式规范。
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +23,9 @@
 	<link href="static/css/fonts.css" rel="stylesheet">
 	<link href="static/css/codemirror.css" rel="stylesheet">
 	<link href="static/css/codemirror-elegant.css" rel="stylesheet">
+	
+	{% include baidu_statistics.html %}
+	{% include google_analytics.html %}
 	
 	<!-- google code prettifier http://code.google.com/p/google-code-prettify/ -->
 	<script type="text/javascript" src="static/js/prettify.js"></script>
@@ -74,7 +83,7 @@
 		<a class="brand" href="/" rel="tooltip" title="Karl Heinrich Marx, 1818 – 1883">
 			<img class="img-rounded" src="static/img/karl-marx-160x40.png">
 		</a>
-		<div class="btn-toolbar" id="general-toolbar">
+		<div class="btn-toolbar" id="general-toolbar" style="float:left;">
 			<button href="#modal-github-signin" id="btn-github-signin-show" role="button" class="btn" data-toggle="modal" rel="tooltip" title="Sign in to GitHub">
 				<i class="icon-github-2"></i>
 			</button>
@@ -175,6 +184,7 @@
 			<button class="btn btn-inverse" id="word-counter" rel="tooltip" title="Word count" disabled>0</button>
 			<button class="btn btn-inverse" id="char-counter" rel="tooltip" title="Character count (a-z, A-Z, 0-9)" disabled>0</button>
 		</div>
+		<a href="http://pandoc.herokuapp.com/" title="Pandoc Markdown写作规范(原创)" target="_blank" style="padding-top:7px;font-weight:bold;font-size:32px;display:block;text-indent:7px;">&rarr;</a>
 		<div class="btn-toolbar" id="github-toolbar" style="display: none">
 			<button class="btn" rel="tooltip" title="GitHub links"  style="margin: auto 5px" disabled><i class="icon-github-2"></i></button>
 			<input class="input-small" type="text" id="user" placeholder="user" style="margin: auto 5px" disabled>
@@ -593,6 +603,10 @@ bib文件的内容是：
 		
 		</div>
 
+	</div>
+
+	<div style="display:none">
+	{% include cnzz_statistics.html %}
 	</div>
 
 	<!-- FOOTER -->
