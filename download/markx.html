@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+
+<h1>Pandoc Markdown写作规范</h1>
+
+<h2>写在前面</h2>
+
+<p>本文是远程集体写书的格式规范说明文档。考虑到不少作者，已熟悉Markdown格式，因此，特别撰写一份基于Pandoc Markdown的写作格式规范。</p>
+
+<h2>语法导读</h2>
+
+<ul>
+<li><a href="http://pages.tzengyuxio.me/pandoc/">Pandoc’s Markdown 語法中文翻譯</a></li>
+</ul>
+
+<h2>标题</h2>
+
+<p>规范</p>
+
+<ul>
+<li>使用 Markdown 的标题格式 <code># 一级标题文字</code>、<code>## 二级标题文字</code> 等来书写标题，毋需人工指定标题序号如 1、1.1 等。</li>
+<li>标题层次深度至多为四级。</li>
+<li>建议在 <code>#</code> 号后面添加一个半角空格。</li>
+</ul>
+
+<p>技巧与帮助</p>
+
+<ul>
+<li>可以直接使用Github在线编辑</li>
+<li><a href="http://markdown.tw/">Markdown语法说明</a></li>
+</ul>
+
+<h2>提示语</h2>
+
+<p>规范</p>
+
+<ul>
+<li>本书仅使用<code>note</code>, <code>danger</code>, <code>error</code>, <code>important</code>, <code>tip</code>, <code>warning</code>（注意，危险，错误，重要，提示，警告）六种提示语</li>
+<li><p>写法为在引用第一行，写： <code>**note**</code> 用来表示此段为提示的文本，再空一行后，开始写提示的正文，如下所示：</p>
+
+<blockquote>
+  <p><strong>note</strong></p>
+  
+  <p>Marr，一个大牛。</p>
+</blockquote></li>
+</ul>
+
+<p>检查了自定义生成的note、tip等的LaTex代码，优雅漂亮，如下：</p>
+
+<pre class="prettyprint"><span class="pln"><span class="pln">\begin</span></span><span class="pun"><span class="pun">{</span></span><span class="pln"><span class="pln">quote</span></span><span class="pun"><span class="pun">}</span></span><span class="pln"><span class="pln">
+\textbf</span></span><span class="pun"><span class="pun">{</span></span><span class="pln"><span class="pln">note</span></span><span class="pun"><span class="pun">}</span></span><span class="pln"><span class="pln">
+
+</span></span><span class="typ"><span class="typ">Marr</span></span><span class="pun"><span class="pun">，一个大牛。</span></span><span class="pln"><span class="pln">
+\end</span></span><span class="pun"><span class="pun">{</span></span><span class="pln"><span class="pln">quote</span></span><span class="pun"><span class="pun">}</span></span></pre>
+
+<h2>定义</h2>
+
+<p>规范</p>
+
+<ul>
+<li><p>使用Term开头，空格，然后写定义。</p>
+
+<pre><code>Term 1
+
+:   Definition 1
+
+Term 2 with *inline markup*
+
+:   Definition 2
+
+        { some code, part of Definition 2 }
+
+    Third paragraph of definition 2.
+</code></pre></li>
+</ul>
+
+<h2>数学公式</h2>
+
+<p>规范</p>
+
+<ul>
+<li>统一使用LaTex输出数学公式，参见：Pandoc数学一节</li>
+<li>使用<code>$</code>表示行内输出；使用<code>$$</code>表示显示模式输出：</li>
+</ul>
+
+<p>示范：</p>
+
+<ul>
+<li>Inline mode <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-1-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-1"><span style="display: inline-block; position: relative; width: 59px; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(29px 16800px 49.2px -8.3px); top: -46px; left: 0px;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mo" id="MathJax-Span-4" style="font-family: MathJax_Main; padding-left: 4.7px;">=</span><span class="mi" id="MathJax-Span-5" style="font-family: MathJax_Math; font-style: italic; padding-left: 4.7px;">m</span><span class="msubsup" id="MathJax-Span-6"><span style="display: inline-block; position: relative; width: 15.3px; height: 0px;"><span style="position: absolute; clip: rect(31.6px 16800px 45.2px -8.4px); top: -42px; left: 0px;"><span class="mi" id="MathJax-Span-7" style="font-family: MathJax_Math; font-style: italic;">c</span><span style="display: inline-block; width: 0px; height: 42px;"></span></span><span style="position: absolute; top: -45.1px; left: 8px;"><span class="mn" id="MathJax-Span-8" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 39px;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 46px;"></span></span></span><span style="border-left-width: 0px; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 16.2px; vertical-align: -1.2px;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-1">e=mc^2</script></li>
+<li>Display mode: <span class="MathJax_Preview"></span><div class="MathJax_Display" role="textbox" aria-readonly="true" style="text-align: center;"><span class="MathJax" id="MathJax-Element-2-Frame"><nobr><span class="math" id="MathJax-Span-9"><span style="display: inline-block; position: relative; width: 239px; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(18px 16800px 60.7px -7px); top: -46px; left: 0px;"><span class="mrow" id="MathJax-Span-10"><span class="mfrac" id="MathJax-Span-11" style="padding-left: 2px; padding-right: 2px;"><span style="display: inline-block; position: relative; width: 43px; height: 0px;"><span style="position: absolute; clip: rect(30.4px 16800px 53.2px -8.4px); top: -58.4px; left: 50%; margin-left: -20.5px;"><span class="mrow" id="MathJax-Span-12"><span class="mi" id="MathJax-Span-13" style="font-family: MathJax_Math; font-style: italic;">d<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.1px;"></span></span><span class="mi" id="MathJax-Span-14" style="font-family: MathJax_Math; font-style: italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 1px;"></span></span><span class="mo" id="MathJax-Span-15" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-16" style="font-family: MathJax_Math; font-style: italic;">x</span><span class="mo" id="MathJax-Span-17" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 46px;"></span></span><span style="position: absolute; clip: rect(27.3px 16800px 45.2px -8.4px); top: -30.5px; left: 50%; margin-left: -7.5px;"><span class="mrow" id="MathJax-Span-18"><span class="mi" id="MathJax-Span-19" style="font-family: MathJax_Math; font-style: italic;">d<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.1px;"></span></span><span class="mi" id="MathJax-Span-20" style="font-family: MathJax_Math; font-style: italic;">t</span></span><span style="display: inline-block; width: 0px; height: 42px;"></span></span><span style="position: absolute; clip: rect(13.8px 16800px 21px -9px); top: -21.7px; left: 0px;"><span style="border-left-width: 43px; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.25px; vertical-align: 0px;"></span><span style="display: inline-block; width: 0px; height: 18px;"></span></span></span></span><span class="mo" id="MathJax-Span-21" style="font-family: MathJax_Main; padding-left: 4.7px;">=</span><span class="mi" id="MathJax-Span-22" style="font-family: MathJax_Math; font-style: italic; padding-left: 4.7px;">l</span><span class="mi" id="MathJax-Span-23" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="msubsup" id="MathJax-Span-24"><span style="display: inline-block; position: relative; width: 41.3px; height: 0px;"><span style="position: absolute; clip: rect(31.6px 16800px 45.2px -8.6px); top: -42px; left: 0px;"><span class="mi" id="MathJax-Span-25" style="font-family: MathJax_Math; font-style: italic;">m</span><span style="display: inline-block; width: 0px; height: 42px;"></span></span><span style="position: absolute; top: -36.5px; left: 15px;"><span class="texatom" id="MathJax-Span-26"><span class="mrow" id="MathJax-Span-27"><span class="mi" id="MathJax-Span-28" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">x</span><span class="mo" id="MathJax-Span-29" style="font-size: 70.7%; font-family: MathJax_Main;">→</span><span class="mn" id="MathJax-Span-30" style="font-size: 70.7%; font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 39px;"></span></span></span></span><span class="texatom" id="MathJax-Span-31"><span class="mrow" id="MathJax-Span-32"><span class="mfrac" id="MathJax-Span-33" style="padding-left: 2px; padding-right: 2px;"><span style="display: inline-block; position: relative; width: 114px; height: 0px;"><span style="position: absolute; clip: rect(30.4px 16800px 53.2px -8.1px); top: -58.4px; left: 50%; margin-left: -56px;"><span class="mrow" id="MathJax-Span-34"><span class="mi" id="MathJax-Span-35" style="font-family: MathJax_Math; font-style: italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 1px;"></span></span><span class="mo" id="MathJax-Span-36" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-37" style="font-family: MathJax_Math; font-style: italic;">x</span><span class="mo" id="MathJax-Span-38" style="font-family: MathJax_Main; padding-left: 3.7px;">+</span><span class="mi" id="MathJax-Span-39" style="font-family: MathJax_Math; font-style: italic; padding-left: 3.7px;">h</span><span class="mo" id="MathJax-Span-40" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-41" style="font-family: MathJax_Main; padding-left: 3.7px;">−</span><span class="mi" id="MathJax-Span-42" style="font-family: MathJax_Math; font-style: italic; padding-left: 3.7px;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 1px;"></span></span><span class="mo" id="MathJax-Span-43" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-44" style="font-family: MathJax_Math; font-style: italic;">x</span><span class="mo" id="MathJax-Span-45" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 46px;"></span></span><span style="position: absolute; clip: rect(27.3px 16800px 45.2px -8.2px); top: -30.5px; left: 50%; margin-left: -5px;"><span class="mi" id="MathJax-Span-46" style="font-family: MathJax_Math; font-style: italic;">h</span><span style="display: inline-block; width: 0px; height: 42px;"></span></span><span style="position: absolute; clip: rect(13.8px 16800px 21px -9px); top: -21.7px; left: 0px;"><span style="border-left-width: 114px; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.25px; vertical-align: 0px;"></span><span style="display: inline-block; width: 0px; height: 18px;"></span></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 46px;"></span></span></span><span style="border-left-width: 0px; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 38.7px; vertical-align: -12.7px;"></span></span></nobr></span></div><script type="math/tex; mode=display" id="MathJax-Element-2">\frac{df(x)}{dt}=lim_{x \to 0}{\frac{f(x+h)-f(x)}{h}}</script></li>
+</ul>
+
+<p>技巧与帮助</p>
+
+<ul>
+<li>LaTex数学公式，参见：<a href="http://zh.wikibooks.org/zh-cn/LaTeX/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">LaTeX/数学公式</a></li>
+</ul>
+
+<h2>图片</h2>
+
+<p>规范</p>
+
+<ul>
+<li>图片在各章下面，分别建立<code>figures</code>目录保存图片；并在<code>figures</code>目录下面建立<code>big</code>目录，用以保存制图的源文件，如ppt、keynote、gephi等；</li>
+<li>非矢量图片需300dpi及以上，以达到堪用的印刷品质，；</li>
+<li>引用图片，统一使用 Markdown 的规范：<code>![图片标题](图片相对地址)</code>；</li>
+<li>图片标题是否人工指定序号由写作者决定。如果打算人工指定，需按章定序，如如：<code>图16-1 社会网络分析结果示意图</code>；</li>
+<li>图片地址写法为：<code>figures/small_world.png</code>，图片命名由英文、数字和下划线构成，不能包括空格、非英文字符。</li>
+</ul>
+
+<h2>表格</h2>
+
+<p>规范</p>
+
+<ul>
+<li>如无意外，使用pandoc简单表格；</li>
+<li>可使用R包<code>pander</code>或其他RMarkdown输出表格。</li>
+<li>表的命名方式，统一为: <code>表3-1 不同中心性测量指标之间的关系</code></li>
+</ul>
+
+<p>技巧与帮助</p>
+
+<p>参考：Pandoc简单表格</p>
+
+<h2>脚注</h2>
+
+<p>脚注用于表示参考文献之外的内容，如本章部分没涉及到的内容或者有争议的话题。</p>
+
+<p>规范</p>
+
+<ul>
+<li>在正文中，写脚注的地方，前后加空格，如：<code>我们发现社会网络是由一个强大的（但大部分是无形的）的“秘书”统治 [^7]</code></li>
+<li>脚注统一写在参考文献之前,写完脚注了，才是参考文献。</li>
+<li>注的开头，统一使用：<code>注：</code>的写法。</li>
+</ul>
+
+<p>如：</p>
+
+<pre><code>[^7]:注：作者此处秘书指的是第一章中“非正式网络的力量”一节介绍的ACME咨询公司的例子中所提到的秘书处。
+</code></pre>
+
+<h2>版本</h2>
+
+<p>规范</p>
+
+<ul>
+<li>RStudio当前最新版本，<code>0.97</code></li>
+<li>R当前最新版本，<code>3.0</code></li>
+</ul>
+
+<h2>R代码</h2>
+
+<p>规范</p>
+
+<ul>
+<li>在各章下面，创建<code>code</code>目录。然后，使用R包：<code>ProjectTemplate</code>创建本章的项目。如果本章都是同一个数据源，则创建为一个项目；如果数据源差异较大，则创建为不同项目。</li>
+</ul>
+
+<p>技巧与帮助</p>
+
+<ul>
+<li><a href="http://projecttemplate.net/getting_started.html">ProjectTemplate教程</a></li>
+<li><a href="http://www.johnmyleswhite.com/notebook/2010/08/26/projecttemplate/">ProjectTemplate</a></li>
+</ul>
+
+<h2>日常Github提交</h2>
+
+<p>规范</p>
+
+<ul>
+<li>基于<code>Git Flow</code></li>
+<li>如果不熟悉<code>Git</code>与<code>Git Flow</code>，建议直接在线编辑、在线提交。</li>
+</ul>
+
+<p>技巧与帮助</p>
+
+<ul>
+<li><a href="http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html">Git flow 备忘清单</a></li>
+<li><a href="http://ihower.tw/blog/archives/5140">Git flow 開發流程</a></li>
+<li><a href="http://fann.im/blog/2012/03/12/git-flow-notes/">Git-flow 使用笔记</a></li>
+</ul>
+
+<p>备注：如果是Windows下的朋友，也可以直接使用本在线编辑器，通过<code>signinToGithub</code>，登陆Github后，找到你的相应章节，提交即可。</p>
+
+<h2>参考文献</h2>
+
+<p>规范</p>
+
+<ul>
+<li>统一使用APA第6版格式输出引文与文末参考文献；</li>
+<li>将每一章的参考文献保存在一个<code>bibtex</code>文件中；</li>
+<li>推荐使用参考文献软件为<code>Zotero</code>或<code>Endnote</code>。</li>
+<li>Pandoc默认支持参考文献，请使用<code>参考文献</code>作为末尾标题。</li>
+<li>参考文献写法是：<code>[@yangzhiping2001]</code>或者<code>[@__2003]</code>，@符号后面直接写bib文件的引用文献的唯一编号，如yangzhiping2001或者__2003 </li>
+</ul>
+
+<p>示例：</p>
+
+<p>bib文件的内容是：</p>
+
+<pre><code>@article{yangzhiping2003,
+    title = {试评卡尼曼经济心理学研究及其影响 [J]},
+    volume = {26},
+    number = {4},
+    urldate = {2013-05-27},
+    journal = {心理科学},
+    author = {阳志平},
+    year = {2003},
+    pages = {724–726}
+}
+</code></pre>
+
+<p>引用键是：<code>yangzhiping2003</code>，那么，引用格式直接这么写：</p>
+
+<pre><code>阳志平在`[@yangzhiping2001]` 、`[@yangzhiping2002]`、`[@yangzhiping200]`中写道。。。
+</code></pre>
+
+<p>技巧与帮助</p>
+
+<p>在<a href="http://www.endnote.com/">EndNote</a>中，一个较好的习惯是，写完论文之后，借助于它的<code>Export Traveling Library</code>功能，将每篇论文的参考文献导出为一个新的Endnote文献管理库，如下图所示：</p>
+
+<p><img src="http://www.yangzhiping.com/images/psy/endnote.png" alt="image" title=""></p>
+
+<h2>参考文献</h2>
+
+<p>请加载附件中的<code>ouyang.bib</code>文件，即会出来本文引用的参考文献。点击<code>Citations</code>=&gt; <code>Load a Bibliography file</code></p>
+
+<h2>其它有用链接</h2>
+
+<p>请参考：</p>
+
+<ul>
+<li><a href="http://www.rstudio.com/ide/docs/authoring/markdown_custom_rendering">Customizing Markdown Rendering</a></li>
+<li><a href="http://www.rstudio.com/ide/docs/authoring/using_markdown_equations">RStuido Markdown</a></li>
+<li><a href="http://stackoverflow.com/tags/pandoc/hot">StackOverFlow pandoc节点</a></li>
+<li><a href="http://johnmacfarlane.net/pandoc/try/">Try Pandoc</a></li>
+</ul>
+
+</body>
+</html>
