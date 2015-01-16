@@ -17,6 +17,7 @@
 
 请参考：
 
+* [markx remote host option]
 * [Customizing Markdown Rendering]
 * [RStuido Markdown]
 * [StackOverFlow pandoc节点]
@@ -25,6 +26,7 @@
 [Markx]: https://github.com/yoavram/markx
 [写作格式规范]: http://alfred-sun.github.io/markx-pandoc/
 [Pandoc’s Markdown 語法中文翻譯]:http://pages.tzengyuxio.me/pandoc/
+[markx remote host option]: http://markx.herokuapp.com/
 [Customizing Markdown Rendering]:http://www.rstudio.com/ide/docs/authoring/markdown_custom_rendering
 [RStuido Markdown]:http://www.rstudio.com/ide/docs/authoring/using_markdown_equations
 [StackOverFlow pandoc节点]:http://stackoverflow.com/tags/pandoc/hot
